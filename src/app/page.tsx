@@ -2,7 +2,10 @@ export default function Home() {
   return (
     <div className="flex-1 flex flex-col items-center justify-center bg-slate-50 text-center">
       <span className="bg-blue-100 text-blue-700 text-xs font-bold rounded-full px-4 py-1">
-        <span className="w-2 h-2 bg-orange-400 rounded-full inline-block mr-1"></span>
+        <span
+          className="w-2 h-2 bg-orange-400 rounded-full inline-block mr-1"
+          aria-hidden="true"
+        ></span>
         TU CIUDAD, HOY
       </span>
 
@@ -24,6 +27,7 @@ export default function Home() {
           strokeWidth={2}
           stroke="currentColor"
           className="w-5 h-5 ml-3 text-blue-700"
+          aria-hidden="true"
         >
           <path
             strokeLinecap="round"
@@ -31,7 +35,11 @@ export default function Home() {
             d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
           />
         </svg>
+        <label htmlFor="search" className="sr-only">
+          Buscar planes
+        </label>
         <input
+          id="search"
           type="text"
           name="search"
           placeholder="Conciertos, cenas, escapadas..."
@@ -46,8 +54,10 @@ export default function Home() {
       </form>
 
       <p className="text-sm text-slate-600 mt-10">
-        <span className="text-green-700">✓</span> Sin reservas complicadas ni
-        ataduras
+        <span className="text-green-700" aria-hidden="true">
+          ✓
+        </span>{" "}
+        Sin reservas complicadas ni ataduras
       </p>
     </div>
   );

@@ -13,10 +13,11 @@ export default async function PlansPage() {
           <Link key={plan.id} href={`/plans/${plan.id}`}>
             <img
               src={plan.image}
+              alt={`Imagen del plan ${plan.name}`}
               className="w-full h-60 object-cover rounded-xl"
             />
             <h4 className="text-2xl text-slate-900 mt-3">{plan.name}</h4>
-            <p className="flex items-center text-sm text-slate-300">
+            <p className="flex items-center text-sm text-slate-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -24,6 +25,7 @@ export default async function PlansPage() {
                 strokeWidth={2}
                 stroke="currentColor"
                 className="w-4 h-4 mr-1"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -34,7 +36,7 @@ export default async function PlansPage() {
               {plan.creator.name}
             </p>
             <div className="flex justify-between items-center mt-1">
-              <p className="text-slate-300">
+              <p className="text-slate-600">
                 Aproximado: ${plan.estimatedPrice}
               </p>
               <p className="flex items-center text-slate-500">
@@ -45,6 +47,7 @@ export default async function PlansPage() {
                   strokeWidth={2}
                   stroke="currentColor"
                   className="w-5 h-5 mr-1 text-red-500"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
