@@ -1,0 +1,64 @@
+{
+  "Home": {
+    "badge": "YOUR CITY, TODAY",
+    "title": "Looking for plans?",
+    "description": "Find spontaneous events, activities with friends and new experiences near you.",
+    "placeholder": "Concerts, dinners, getaways...",
+    "explore": "Explore →",
+    "footer": "No complicated reservations or commitments"
+  },
+  "Header": {
+    "title": "Plans",
+    "explore": "Explore Plans",
+    "create": "+ Create Plan",
+    "login": "Log in",
+    "register": "Sign up",
+    "logout": "Log out",
+    "language": "Change language"
+  },
+  "Login": {
+    "title": "Log in",
+    "description": "Good to see you again. Log in to see your plans.",
+    "email": "Email",
+    "emailPlaceholder": "email@example.com",
+    "password": "Password",
+    "submit": "Log in",
+    "error": "Incorrect email or password"
+  },
+  "Register": {
+    "title": "Create your account",
+    "description": "Sign up to discover and join new plans.",
+    "username": "Username",
+    "usernamePlaceholder": "your_username",
+    "name": "Name",
+    "namePlaceholder": "Your full name",
+    "email": "Email",
+    "emailPlaceholder": "email@example.com",
+    "password": "Password",
+    "submit": "Create account",
+    "footer": "It's free and only takes a minute",
+    "error": "The account could not be created. Check your information"
+  },
+  "Plans": {
+    "title": "Explore plans",
+    "estimated": "Estimated"
+  },
+  "PlanDetail": {
+    "back": "← Back to plans",
+    "organizedBy": "Organized by",
+    "likes": "likes",
+    "description": "Plan description",
+    "recommendations": "Recommendations",
+    "perPerson": "/ person",
+    "duration": "Duration",
+    "minutes": "min approx.",
+    "like": "Like",
+    "ask": "Ask the host",
+    "cancel": "Free cancellation up to 24 hours before the start.",
+    "safe": "🛡️ Safe and guaranteed experience",
+    "safeDescription": "Accident insurance included for all registered participants.",
+    "loading": "Loading plan...",
+    "notFound": "This plan does not exist.",
+    "likeError": "Could not like this plan"
+  }
+}

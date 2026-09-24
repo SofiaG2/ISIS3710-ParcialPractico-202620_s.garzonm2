@@ -1,7 +1,7 @@
 "use client";
-
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import {useTranslations} from "next-intl";
+import {useRouter} from "@/i18n/navigation";
 import { register } from "@/services/auth";
 import { saveSession } from "@/services/session";
 
@@ -12,28 +12,24 @@ export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const t = useTranslations("Register");
+  async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
-
     try {
       const id = await register(username, email, name, password);
       saveSession(id, username);
       router.push("/plans");
     } catch (err) {
-      setError("No se pudo crear la cuenta, revisa los datos");
+      setError(t("error"));
       console.log(err);
     }
   }
-
   return (
     <div className="flex-1 flex flex-col items-center justify-center bg-slate-50">
-
-
-      <h1 className="text-5xl font-bold text-slate-900 mt-6">Crea tu cuenta</h1>
+      <h1 className="text-5xl font-bold text-slate-900 mt-6">{t("title")}</h1>
       <p className="text-lg text-slate-600 mt-2">
-        Regístrate para descubrir y unirte a nuevos planes.
+        {t("description")}
       </p>
 
       <form
@@ -41,13 +37,13 @@ export default function RegisterPage() {
         className="bg-white rounded-2xl shadow-lg p-8 mt-10 w-full max-w-md"
       >
         <label htmlFor="username" className="block text-sm font-semibold text-slate-700">
-          Usuario
+          {t("username")}
         </label>
         <input
           id="username"
           type="text"
           name="username"
-          placeholder="tu_usuario"
+          placeholder={t("usernamePlaceholder")}
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
@@ -55,13 +51,13 @@ export default function RegisterPage() {
         />
 
         <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mt-4">
-          Nombre
+          {t("name")}
         </label>
         <input
           id="name"
           type="text"
           name="name"
-          placeholder="Tu nombre completo"
+          placeholder={t("namePlaceholder")}
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
@@ -69,13 +65,13 @@ export default function RegisterPage() {
         />
 
         <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mt-4">
-          Correo electrónico
+          {t("email")}
         </label>
         <input
           id="email"
           type="email"
           name="email"
-          placeholder="correo@ejemplo.com"
+          placeholder={t("emailPlaceholder")}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -83,7 +79,7 @@ export default function RegisterPage() {
         />
 
         <label htmlFor="password" className="block text-sm font-semibold text-slate-700 mt-4">
-          Contraseña
+          {t("password")}
         </label>
         <input
           id="password"
@@ -102,12 +98,12 @@ export default function RegisterPage() {
           type="submit"
           className="w-full bg-blue-700 text-white font-semibold rounded-xl py-4 mt-8"
         >
-          Crear cuenta
+          {t("submit")}
         </button>
       </form>
 
       <p className="text-sm text-slate-600 mt-8">
-        Es gratis y solo toma un minuto
+        {t("footer")}
       </p>
     </div>
   );

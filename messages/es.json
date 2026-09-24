@@ -1,0 +1,64 @@
+{
+  "Home": {
+    "badge": "TU CIUDAD, HOY",
+    "title": "¿Buscas planes?",
+    "description": "Encuentra eventos espontáneos, actividades con amigos y nuevas experiencias cerca de ti.",
+    "placeholder": "Conciertos, cenas, escapadas...",
+    "explore": "Explorar →",
+    "footer": "Sin reservas complicadas ni ataduras"
+  },
+  "Header": {
+    "title": "Planes Parcial",
+    "explore": "Explorar Planes",
+    "create": "+ Crear Plan",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar sesión",
+    "language": "Cambiar idioma"
+  },
+  "Login": {
+    "title": "Inicia sesión",
+    "description": "Qué bueno verte de nuevo. Ingresa para ver tus planes.",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "correo@ejemplo.com",
+    "password": "Contraseña",
+    "submit": "Iniciar sesión",
+    "error": "Correo o contraseña incorrectos"
+  },
+  "Register": {
+    "title": "Crea tu cuenta",
+    "description": "Regístrate para descubrir y unirte a nuevos planes.",
+    "username": "Usuario",
+    "usernamePlaceholder": "tu_usuario",
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre completo",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "correo@ejemplo.com",
+    "password": "Contraseña",
+    "submit": "Crear cuenta",
+    "footer": "Es gratis y solo toma un minuto",
+    "error": "No se pudo crear la cuenta, revisa los datos"
+  },
+  "Plans": {
+    "title": "Explorar planes",
+    "estimated": "Aproximado"
+  },
+  "PlanDetail": {
+    "back": "← Volver a planes",
+    "organizedBy": "Organizado por",
+    "likes": "likes",
+    "description": "Descripción del plan",
+    "recommendations": "Recomendaciones",
+    "perPerson": "/ persona",
+    "duration": "Duración",
+    "minutes": "min aprox.",
+    "like": "Me gustó",
+    "ask": "Preguntar al anfitrión",
+    "cancel": "Cancelación gratuita hasta 24 horas antes del inicio.",
+    "safe": "🛡️ Experiencia segura y garantizada",
+    "safeDescription": "Seguro de accidentes incluido para todos los participantes registrados.",
+    "loading": "Cargando plan...",
+    "notFound": "Este plan no existe.",
+    "likeError": "No se pudo dar me gusta a este plan"
+  }
+}
